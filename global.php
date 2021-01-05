@@ -4,6 +4,7 @@ require "vendor/autoload.php";
 use PHPHtmlParser\Dom;
 
 function checkPage($page_url){
+    set_time_limit(0);
     $dom = new Dom;
 
     $dom->loadFromUrl($page_url);

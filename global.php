@@ -15,6 +15,23 @@ function checkPage($page_url){
         if(count($step_lis) == 7){
             $review_step_li = $step_lis[5];
             if(trim($review_step_li->text) == 'Review'){
+                // get date
+                $main_title = $dom->find('.main-title')[0];
+                if($main_title){
+                    $main_title_explode = explode('on ', $main_title->text);                    
+                    if(count($main_title_explode) == 2){
+                        $clinic_date = trim($main_title_explode[1]);
+                        
+                        $clinic_date = new DateTime($clinic_date);
+                        $today = date('m/d/Y');
+                        $today = new DateTime($today);
+
+                        if($today <= $clinic_date){
+                            return true;
+                        }
+                        return false;
+                    }
+                }
                 return true;
             }
         }

@@ -1,0 +1,4 @@
+https://cw.calvax.org/client/registration?clinic_id=4
+https://cw.calvax.org/client/registration?clinic_id=15
+https://cw.calvax.org/client/registration?clinic_id=27
+https://cw.calvax.org/client/registration?clinic_id=28
